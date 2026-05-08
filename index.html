@@ -1,0 +1,578 @@
+<!--
+Template Name: Tailone - Tailwind One Page Template
+Author: Aribudin
+Website: https://www.tailwindtemplate.net
+Contact: support@tailwindtemplate.net
+Purchase: https://themes.tailwindtemplate.net/tailone
+License: You must have a valid license from official store to legally use the theme for your project.
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#050506">
+
+  <title>Charlotte Custom - Estética Automotiva Premium em Bauru</title>
+  <meta name="description" content="Charlotte Custom em Bauru: estética automotiva premium, vitrificação, polimento técnico, envelopamento, PPF, higienização e restauração de faróis.">
+  <meta name="keywords" content="estética automotiva Bauru, vitrificação, polimento técnico, envelopamento automotivo, PPF, Charlotte Custom">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Charlotte Custom - Estética Automotiva de Bauru">
+  <meta property="og:description" content="Acabamento sofisticado para carros especiais: polimento, vitrificação, PPF, envelopamento e higienização detalhada.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="src/img/Charlotte.png">
+
+  <link rel="preconnect" href="https://www.instagram.com">
+  <link rel="preconnect" href="https://www.google.com">
+  <link rel="stylesheet" href="src/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="src/img/favicon-32x32.png">
+
+  <style>
+    :root {
+      --pink: #e00486;
+      --black: #050506;
+      --panel: #1a1b20;
+      --muted: #7f8184;
+      --purple: #70124b;
+      --line: rgba(224, 4, 134, .24);
+      --soft: rgba(255, 255, 255, .08);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--black);
+      color: #e7e7ea;
+    }
+    .mt-8 { margin-top: 2rem; }
+    .mb-10 { margin-bottom: 2.5rem; }
+    .ml-8 { margin-left: 2rem; }
+    .mr-3 { margin-right: .75rem; }
+    .p-5 { padding: 1.25rem; }
+    .p-6 { padding: 1.5rem; }
+    .px-8 { padding-left: 2rem; padding-right: 2rem; }
+    .pt-10 { padding-top: 2.5rem; }
+    .pb-10 { padding-bottom: 2.5rem; }
+    .pb-12 { padding-bottom: 3rem; }
+    .h-24 { height: 6rem; }
+    .w-24 { width: 6rem; }
+    .min-h-screen { min-height: 100vh; }
+    .min-h-96 { min-height: 24rem; }
+    .max-w-3xl { max-width: 48rem; }
+    .items-stretch { align-items: stretch; }
+    .justify-start { justify-content: flex-start; }
+    .gap-4 { gap: 1rem; }
+    .leading-tight { line-height: 1.15; }
+    .text-gray-300 { color: #d8d8dc; }
+    .text-gray-400 { color: #a8a9ad; }
+    .space-y-5 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.25rem; }
+    @media (min-width: 640px) {
+      .sm\:flex-row { flex-direction: row; }
+      .sm\:w-1\/3 { width: 33.333333%; }
+    }
+    @media (min-width: 768px) {
+      .md\:text-2xl { font-size: 1.5rem; line-height: 2rem; }
+      .md\:text-6xl { font-size: 3.75rem; line-height: 1; }
+      .md\:p-8 { padding: 2rem; }
+      .md\:p-10 { padding: 2.5rem; }
+      .md\:py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+      .md\:pt-20 { padding-top: 5rem; }
+      .md\:pb-16 { padding-bottom: 4rem; }
+    }
+    @media (min-width: 1024px) {
+      .lg\:w-5\/12 { width: 41.666667%; }
+      .lg\:w-7\/12 { width: 58.333333%; }
+      .lg\:justify-start { justify-content: flex-start; }
+      .lg\:mx-0 { margin-left: 0; margin-right: 0; }
+    }
+
+    body.loaded-success .preloader { display: none; }
+    .preloader { background: var(--black); }
+    .brand-mark { width: 48px; height: 48px; object-fit: contain; }
+    .main-nav {
+      color: #f7f7f8;
+      transition: background .3s ease, border-color .3s ease, box-shadow .3s ease;
+      border-bottom: 1px solid transparent;
+    }
+    .main-nav.navbar-scrolled {
+      background: rgba(5, 5, 6, .9);
+      border-color: rgba(255, 255, 255, .08);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, .28);
+      backdrop-filter: blur(14px);
+    }
+    .navbar {
+      background: rgba(5, 5, 6, .96);
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: 0 0 8px 8px;
+    }
+    @media (min-width: 1024px) {
+      .navbar { background: transparent; border: 0; border-radius: 0; }
+    }
+    .navbar a { color: rgba(255, 255, 255, .82); transition: color .2s ease, border-color .2s ease; }
+    .navbar a:hover, .navbar a.active { color: #fff; border-color: var(--pink); }
+    .menu-mobile { color: #fff; }
+    .section-dark {
+      background:
+        radial-gradient(circle at 18% 4%, rgba(224, 4, 134, .13), transparent 30%),
+        linear-gradient(180deg, #050506 0%, #0b0c10 52%, #050506 100%);
+    }
+    .section-panel { background: #0b0c10; }
+    .section-title { color: #fff; letter-spacing: 0; }
+    .section-kicker {
+      color: var(--pink);
+      text-transform: uppercase;
+      font-size: .76rem;
+      letter-spacing: .14em;
+      font-weight: 700;
+    }
+    .divider svg .stroke-primary { stroke: var(--pink); }
+    .hero {
+      min-height: 100vh;
+      isolation: isolate;
+      overflow: hidden;
+      background: #050506 url("src/img/Charlotte.png") center/180px no-repeat;
+    }
+    .hero-media, .hero-media iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .hero-media iframe {
+      border: 0;
+      transform: scale(1.16);
+      transform-origin: center;
+      filter: saturate(1.06) contrast(1.08);
+      pointer-events: none;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(90deg, rgba(5, 5, 6, .9) 0%, rgba(5, 5, 6, .68) 48%, rgba(5, 5, 6, .88) 100%),
+        linear-gradient(180deg, rgba(5, 5, 6, .2), rgba(5, 5, 6, .82));
+    }
+    .hero-content { position: relative; z-index: 2; }
+    .accent { color: var(--pink); }
+    .btn-primary, .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .55rem;
+      min-height: 48px;
+      border-radius: 6px;
+      font-weight: 700;
+      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease, background .22s ease;
+    }
+    .btn-primary {
+      color: #fff;
+      background: var(--pink);
+      border: 1px solid var(--pink);
+      box-shadow: 0 18px 48px rgba(224, 4, 134, .28);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 24px 62px rgba(224, 4, 134, .36); }
+    .btn-secondary {
+      color: #fff;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .16);
+      backdrop-filter: blur(12px);
+    }
+    .btn-secondary:hover { border-color: var(--pink); transform: translateY(-2px); }
+    .glass-panel {
+      background: rgba(26, 27, 32, .72);
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: 8px;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, .28);
+      backdrop-filter: blur(12px);
+    }
+    .service-card {
+      height: 100%;
+      min-height: 172px;
+      border-radius: 8px;
+      background: linear-gradient(180deg, rgba(26, 27, 32, .95), rgba(13, 14, 18, .95));
+      border: 1px solid rgba(255, 255, 255, .08);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .04);
+      transition: transform .24s ease, border-color .24s ease, box-shadow .24s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--line);
+      box-shadow: 0 24px 58px rgba(0, 0, 0, .34);
+    }
+    .icon-box {
+      width: 46px;
+      height: 46px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--pink);
+      background: rgba(224, 4, 134, .09);
+      border: 1px solid rgba(224, 4, 134, .24);
+    }
+    .portfolio-card {
+      background: #101116;
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: 8px;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, .24);
+      transition: transform .24s ease, border-color .24s ease;
+    }
+    .portfolio-card:hover { transform: translateY(-4px); border-color: var(--line); }
+    .ig-media {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      background: #050506;
+      overflow: hidden;
+    }
+    .ig-media iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      background: #050506;
+    }
+    .chat-card {
+      background: linear-gradient(180deg, rgba(26, 27, 32, .98), rgba(11, 12, 16, .98));
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: 8px;
+      min-height: 230px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+    }
+    .chat-bubble {
+      position: relative;
+      border-radius: 8px 8px 8px 2px;
+      background: rgba(255, 255, 255, .08);
+      color: #f0f0f2;
+      line-height: 1.65;
+    }
+    .chat-bubble.answer {
+      background: linear-gradient(135deg, rgba(224, 4, 134, .92), rgba(112, 18, 75, .94));
+      border-radius: 8px 8px 2px 8px;
+    }
+    .avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      background: rgba(224, 4, 134, .14);
+      border: 1px solid rgba(224, 4, 134, .35);
+      color: var(--pink);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+    .process-step {
+      border-left: 1px solid var(--line);
+      background: rgba(255, 255, 255, .035);
+      border-radius: 8px;
+    }
+    .input-dark {
+      color: #fff;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: 6px;
+    }
+    .input-dark:focus { border-color: var(--pink); outline: 0; }
+    footer { background: #050506; color: #c8c8cc; }
+    .footer-link, .social-link { transition: color .2s ease, transform .2s ease, border-color .2s ease; }
+    .footer-link:hover, .social-link:hover { color: #fff; }
+    .social-link {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, .1);
+      color: var(--pink);
+    }
+    .social-link:hover { transform: translateY(-2px); border-color: var(--pink); }
+    .whatsapp-float {
+      right: 1rem;
+      bottom: 5.25rem;
+      z-index: 45;
+      width: 58px;
+      height: 58px;
+      border-radius: 999px;
+      background: var(--pink);
+      color: #fff;
+      box-shadow: 0 18px 40px rgba(224, 4, 134, .38);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .whatsapp-float:hover { transform: translateY(-3px); box-shadow: 0 22px 54px rgba(224, 4, 134, .48); }
+    .back-top { background: #1a1b20; border-color: rgba(255, 255, 255, .12); color: #fff; }
+    @media (max-width: 640px) {
+      .hero { min-height: 92vh; }
+      .hero-media iframe { transform: scale(1.42); }
+      .section-title { font-size: 1.75rem; }
+      .portfolio-card .px-4 { padding-left: .85rem; padding-right: .85rem; }
+    }
+  </style>
+</head>
+<body class="text-gray-300">
+	<div class="preloader loaded-success fixed inset-0 z-50">
+	  <div class="absolute left-1/2 top-1/2 transform -translate-y-1/2">
+	    <div class="relative mx-auto my-12">
+	      <svg class="animate-spin h-8 w-8" style="color: var(--pink);" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-label="Carregando">
+	        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+	        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+	      </svg>
+	    </div>
+	  </div>
+	</div>
+
+  <header class="fixed top-0 left-0 right-0 z-40">
+     <nav class="main-nav">
+        <div class="container xl:max-w-6xl mx-auto px-4">
+          <div class="lg:flex lg:justify-between">
+          	<div class="flex justify-between">
+	            <a href="#hero" class="flex items-center py-3" aria-label="Charlotte Custom">
+                <img src="src/img/Charlotte.png" class="brand-mark mr-3" alt="Logo Charlotte Custom" width="48" height="48">
+                <span class="text-xl md:text-2xl font-bold text-white">Charlotte <span class="accent">Custom</span></span>
+              </a>
+	            <div class="flex flex-row items-center py-4 lg:py-0">
+	              <div class="relative block lg:hidden">
+	                <button type="button" class="menu-mobile block py-3 px-4 border-b-2 border-transparent" aria-label="Abrir menu">
+	                  <span class="sr-only">Menu mobile</span>
+	                  <svg class="open h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="close h-8 w-8" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/><path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/></svg>
+	                </button>
+	              </div>
+	            </div>
+	          </div>
+            <div class="flex flex-row">
+              <ul class="navbar w-full hidden text-center lg:text-left lg:flex lg:flex-row text-sm items-center font-bold">
+                <li class="relative"><a class="active block py-3 lg:py-7 px-5 border-b-2 border-transparent" href="#hero">Início</a></li>
+                <li class="relative"><a class="block py-3 lg:py-7 px-5 border-b-2 border-transparent" href="#services">Serviços</a></li>
+                <li class="relative"><a class="block py-3 lg:py-7 px-5 border-b-2 border-transparent" href="#portfolio">Projetos</a></li>
+                <li class="relative"><a class="block py-3 lg:py-7 px-5 border-b-2 border-transparent" href="#clients">Depoimentos</a></li>
+                <li class="relative"><a class="block py-3 lg:py-7 px-5 border-b-2 border-transparent" href="#team">Processo</a></li>
+                <li class="relative"><a class="block py-3 lg:py-7 px-5 border-b-2 border-transparent" href="#contact">Contato</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+     </nav>
+  </header>
+
+  <main id="content">
+		<section id="hero" class="section hero relative z-0 py-16 md:pt-32 md:pb-20">
+      <div class="hero-media" aria-hidden="true">
+        <iframe title="Charlotte Custom em ação" src="https://www.instagram.com/reel/DHpJpZ8sme9/embed?utm_source=ig_embed&amp;autoplay=1&amp;muted=1" allow="autoplay; encrypted-media; picture-in-picture" loading="eager"></iframe>
+      </div>
+		  <div class="hero-content container xl:max-w-6xl mx-auto px-4">
+		    <div class="flex flex-wrap flex-row -mx-4 items-center min-h-screen pt-20 pb-12">
+		      <div class="flex-shrink max-w-full px-4 w-full lg:w-7/12">
+		        <div class="text-center lg:text-left">
+		          <div class="mb-10">
+                <p class="section-kicker mb-4">Estética automotiva premium em Bauru</p>
+		            <h1 class="text-4xl md:text-6xl leading-tight text-white font-bold mb-5">Acabamento de alto padrão para carros que pedem presença.</h1>
+		            <p class="text-gray-300 leading-relaxed font-light text-xl md:text-2xl mx-auto lg:mx-0 pb-2 max-w-3xl">Polimento técnico, vitrificação, PPF, envelopamento e detalhamento com leitura precisa de pintura, brilho profundo e estética agressiva.</p>
+		          </div>
+              <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+  							<a class="btn-primary py-3 px-8" target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send/?phone=5514988015487&amp;text=Ol%C3%A1%2C%20quero%20agendar%20um%20servi%C3%A7o%20na%20Charlotte%20Custom.">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M256.1 48C141.1 48 48 139.6 48 252.6c0 36.1 9.7 71.4 28.1 102.4L48 464l112.2-29.1c29.5 16 62.7 24.4 96 24.4h.1c115 0 207.9-91.6 207.9-204.6C464.2 139.6 371.1 48 256.1 48Zm122.1 292.2c-5.2 14.5-30.2 27.7-42.2 29.4-10.8 1.6-24.4 2.3-39.4-2.4-9.1-2.9-20.8-6.8-35.7-13.2-62.8-27.1-103.8-90.1-106.9-94.3-3.1-4.1-25.5-33.9-25.5-64.6s16.1-45.8 21.8-52.1c5.7-6.2 12.5-7.8 16.6-7.8h12c3.8.2 9 .7 13.7 10.5 5.2 10.4 17.7 43.2 19.2 46.3 1.6 3.1 2.6 6.8.5 10.9-2.1 4.2-3.1 6.8-6.2 10.4-3.1 3.6-6.5 8-9.4 10.7-3.1 3.1-6.3 6.5-2.7 12.7 3.6 6.2 16 26.3 34.3 42.6 23.6 21 43.5 27.5 49.7 30.6 6.2 3.1 9.9 2.6 13.5-1.6 3.6-4.1 15.6-18.2 19.8-24.4 4.2-6.2 8.3-5.2 14.1-3.1 5.7 2.1 36.4 17.2 42.7 20.3 6.2 3.1 10.4 4.7 12 7.3 1.5 2.6 1.5 15.1-3.7 29.8Z"/></svg>
+                  Agendar serviço
+                </a>
+  							<a class="btn-secondary py-3 px-8" href="#portfolio">Ver Projetos</a>
+              </div>
+		        </div>
+		      </div>
+          <div class="flex-shrink max-w-full px-4 w-full lg:w-5/12 mt-12 lg:mt-0">
+            <div class="glass-panel p-6 md:p-8 wow fadeInUp" data-wow-duration="1s">
+              <img src="src/img/Charlotte.png" class="w-24 h-24 mx-auto lg:mx-0 mb-5" alt="Charlotte Custom" width="96" height="96">
+              <p class="text-white text-2xl font-bold mb-3">Detailing, proteção e customização.</p>
+              <p class="text-gray-400 leading-relaxed">Projetos executados com critério: preparação correta da superfície, materiais premium e finalização limpa para rua, evento ou coleção.</p>
+            </div>
+          </div>
+		    </div>
+		  </div>
+		</section>
+
+		<section id="services" class="section section-dark relative pt-20 pb-10 md:pt-20 md:pb-16">
+		  <div class="container xl:max-w-6xl mx-auto px-4">
+				<header class="text-center mx-auto mb-12 lg:px-20">
+          <p class="section-kicker mb-3">Serviços</p>
+				  <h2 class="section-title text-3xl leading-normal mb-2 font-bold">Estética completa para acabamento premium</h2>
+				  <div class="divider">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 60" style="margin: 0 auto;height: 35px;" aria-hidden="true"><circle cx="50.1" cy="30.4" r="5" class="stroke-primary" style="fill: transparent;stroke-width: 2;stroke-miterlimit: 10;"></circle><line x1="55.1" y1="30.4" x2="100" y2="30.4" class="stroke-primary" style="stroke-width: 2;stroke-miterlimit: 10;"></line><line x1="45.1" y1="30.4" x2="0" y2="30.4" class="stroke-primary" style="stroke-width: 2;stroke-miterlimit: 10;"></line></svg>
+          </div>
+				  <p class="text-gray-400 leading-relaxed font-light text-xl mx-auto pb-2">Soluções para recuperar brilho, proteger pintura, renovar detalhes e transformar presença visual.</p>
+				</header>
+
+		    <div class="flex flex-wrap flex-row -mx-3">
+          <div class="flex-shrink px-3 max-w-full w-full sm:w-1/2 lg:w-1/4 mb-6 wow fadeInUp" data-wow-duration="1s"><div class="service-card p-6"><span class="icon-box mb-5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18"/><path d="M5 8h14"/><path d="M7 16h10"/></svg></span><h3 class="text-lg mb-2 font-semibold text-white">Polimento de vidros</h3><p class="text-gray-400">Clareza, remoção de marcas e melhora da visibilidade.</p></div></div>
+          <div class="flex-shrink px-3 max-w-full w-full sm:w-1/2 lg:w-1/4 mb-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".05s"><div class="service-card p-6"><span class="icon-box mb-5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 13h16"/><path d="M6 17h12"/><path d="M8 9h8"/><circle cx="12" cy="12" r="8"/></svg></span><h3 class="text-lg mb-2 font-semibold text-white">Polimento de farol</h3><p class="text-gray-400">Correção da lente para brilho e segurança.</p></div></div>
+          <div class="flex-shrink px-3 max-w-full w-full sm:w-1/2 lg:w-1/4 mb-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s"><div class="service-card p-6"><span class="icon-box mb-5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15c4-6 12-6 16 0"/><path d="M6 15v3h12v-3"/><path d="M9 11l-2-2"/><path d="M15 11l2-2"/></svg></span><h3 class="text-lg mb-2 font-semibold text-white">Restauração de farol</h3><p class="text-gray-400">Recuperação de oxidação e acabamento durável.</p></div></div>
+          <div class="flex-shrink px-3 max-w-full w-full sm:w-1/2 lg:w-1/4 mb-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".15s"><div class="service-card p-6"><span class="icon-box mb-5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 14c3-5 15-5 18 0"/><path d="M5 14l1 5h12l1-5"/><path d="M8 10h8"/></svg></span><h3 class="text-lg mb-2 font-semibold text-white">Restauração de para-brisa</h3><p class="text-gray-400">Tratamento técnico para marcas e desgaste superficial.</p></div></div>
+          <div class="flex-shrink px-3 max-w-full w-full sm:w-1/2 lg:w-1/4 mb-6 wow fadeInUp" data-wow-duration="1s"><div class="service-card p-6"><span class="icon-box mb-5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17l4-10h8l4 10"/><path d="M6 17h12"/><path d="M8 13h8"/><circle cx="7" cy="18" r="1"/><circle cx="17" cy="18" r="1"/></svg></span><h3 class="text-lg mb-2 font-semibold text-white">Customização automotiva</h3><p class="text-gray-400">Personalização visual com presença e bom gosto.</p></div></div>
+          <div class="flex-shrink px-3 max-w-full w-full sm:w-1/2 lg:w-1/4 mb-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".05s"><div class="service-card p-6"><span class="icon-box mb-5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v8H4z"/><path d="M8 12v8"/><path d="M16 12v8"/><path d="M8 16h8"/></svg></span><h3 class="text-lg mb-2 font-semibold text-white">Envelopamento automotivo</h3><p class="text-gray-400">Mudança estética, proteção e acabamento uniforme.</p></div></div>
+          <div class="flex-shrink px-3 max-w-full w-full sm:w-1/2 lg:w-1/4 mb-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s"><div class="service-card p-6"><span class="icon-box mb-5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2s6 6 6 11a6 6 0 0 1-12 0c0-5 6-11 6-11z"/><path d="M9 14c1 2 3 3 5 2"/></svg></span><h3 class="text-lg mb-2 font-semibold text-white">Lavagem técnica</h3><p class="text-gray-400">Limpeza segura para preservar pintura e proteção.</p></div></div>
+          <div class="flex-shrink px-3 max-w-full w-full sm:w-1/2 lg:w-1/4 mb-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".15s"><div class="service-card p-6"><span class="icon-box mb-5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="M12 4v16"/><path d="M4 12h16"/></svg></span><h3 class="text-lg mb-2 font-semibold text-white">Polimento automotivo</h3><p class="text-gray-400">Brilho profundo e correção visual da pintura.</p></div></div>
+          <div class="flex-shrink px-3 max-w-full w-full sm:w-1/2 lg:w-1/4 mb-6 wow fadeInUp" data-wow-duration="1s"><div class="service-card p-6"><span class="icon-box mb-5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16"/><path d="M12 4v16"/><path d="M7 7l10 10"/><path d="M17 7L7 17"/></svg></span><h3 class="text-lg mb-2 font-semibold text-white">Polimento técnico</h3><p class="text-gray-400">Correção controlada para pinturas exigentes.</p></div></div>
+          <div class="flex-shrink px-3 max-w-full w-full sm:w-1/2 lg:w-1/4 mb-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".05s"><div class="service-card p-6"><span class="icon-box mb-5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 4v6c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-5"/></svg></span><h3 class="text-lg mb-2 font-semibold text-white">Instalação de PPF</h3><p class="text-gray-400">Película de proteção para áreas sensíveis.</p></div></div>
+          <div class="flex-shrink px-3 max-w-full w-full sm:w-1/2 lg:w-1/4 mb-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s"><div class="service-card p-6"><span class="icon-box mb-5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M7 8h10"/><path d="M8 16h8"/><path d="M12 3v18"/></svg></span><h3 class="text-lg mb-2 font-semibold text-white">Limpeza detalhada</h3><p class="text-gray-400">Atenção a cantos, emblemas, rodas e acabamentos.</p></div></div>
+          <div class="flex-shrink px-3 max-w-full w-full sm:w-1/2 lg:w-1/4 mb-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".15s"><div class="service-card p-6"><span class="icon-box mb-5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 20v-8a5 5 0 0 1 10 0v8"/><path d="M5 20h14"/><path d="M9 7h6"/><path d="M12 3v4"/></svg></span><h3 class="text-lg mb-2 font-semibold text-white">Higienização interna</h3><p class="text-gray-400">Cabine limpa, confortável e com toque refinado.</p></div></div>
+          <div class="flex-shrink px-3 max-w-full w-full sm:w-1/2 lg:w-1/4 mb-6 wow fadeInUp" data-wow-duration="1s"><div class="service-card p-6"><span class="icon-box mb-5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16"/><path d="M12 4v16"/><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg></span><h3 class="text-lg mb-2 font-semibold text-white">Higienização de ar-condicionado</h3><p class="text-gray-400">Tratamento para fluxo de ar mais limpo.</p></div></div>
+          <div class="flex-shrink px-3 max-w-full w-full sm:w-1/2 lg:w-1/4 mb-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".05s"><div class="service-card p-6"><span class="icon-box mb-5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 4v5c0 4.5-2.8 7.8-7 9-4.2-1.2-7-4.5-7-9V7l7-4z"/><path d="M8 12h8"/></svg></span><h3 class="text-lg mb-2 font-semibold text-white">Vitrificação</h3><p class="text-gray-400">Proteção, repelência e profundidade de brilho.</p></div></div>
+		    </div>
+		  </div>
+		</section>
+
+		<section id="portfolio" class="section section-panel relative z-0 py-16 md:py-20">
+			<div class="container xl:max-w-6xl mx-auto px-4">
+				<header class="text-center mx-auto mb-12 lg:px-20">
+          <p class="section-kicker mb-3">Projetos</p>
+				  <h2 class="section-title text-3xl leading-normal mb-2 font-bold">Carros que receberam tratamento Charlotte</h2>
+				  <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 60" style="margin: 0 auto;height: 35px;" aria-hidden="true"><circle cx="50.1" cy="30.4" r="5" class="stroke-primary" style="fill: transparent;stroke-width: 2;stroke-miterlimit: 10;"></circle><line x1="55.1" y1="30.4" x2="100" y2="30.4" class="stroke-primary" style="stroke-width: 2;stroke-miterlimit: 10;"></line><line x1="45.1" y1="30.4" x2="0" y2="30.4" class="stroke-primary" style="stroke-width: 2;stroke-miterlimit: 10;"></line></svg></div>
+				  <p class="text-gray-400 leading-relaxed font-light text-xl mx-auto pb-2">Portfólio com cores reais dos vídeos, sem filtros e sem escala agressiva no hover.</p>
+				</header>
+			</div>
+
+			<div class="flex flex-wrap flex-row px-2">
+        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Porsche 911" src="https://www.instagram.com/reel/DRDtwIQjwkg/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Porsche 911</h3><small class="text-gray-400">Detalhamento premium</small></figcaption></div></figure>
+        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".05s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Mercedes C250" src="https://www.instagram.com/reel/DPv2vvPgJuV/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Mercedes C250</h3><small class="text-gray-400">Acabamento sofisticado</small></figcaption></div></figure>
+        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Nissan 350Z" src="https://www.instagram.com/reel/C02Xty8uwXT/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Nissan 350Z</h3><small class="text-gray-400">Esportividade em foco</small></figcaption></div></figure>
+        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".15s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Nissan Silvia" src="https://www.instagram.com/reel/C_JsuU3uP2N/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Nissan Silvia</h3><small class="text-gray-400">Customização automotiva</small></figcaption></div></figure>
+        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto BMW" src="https://www.instagram.com/reel/DSPzCbPDXCv/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">BMW</h3><small class="text-gray-400">Presença premium</small></figcaption></div></figure>
+        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Range Rover" src="https://www.instagram.com/reel/DGDbPxZo7O_/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Range Rover</h3><small class="text-gray-400">Luxo e proteção</small></figcaption></div></figure>
+        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".05s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Volvo XC90" src="https://www.instagram.com/reel/DNnoRAYApaA/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Volvo XC90</h3><small class="text-gray-400">Detalhamento familiar premium</small></figcaption></div></figure>
+        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Audi S3" src="https://www.instagram.com/reel/C8j-iqEOPeO/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Audi S3</h3><small class="text-gray-400">Visual esportivo</small></figcaption></div></figure>
+        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".15s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Chevrolet Camaro Amarelo" src="https://www.instagram.com/reel/C3gUOgJu8q9/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Chevrolet Camaro Amarelo</h3><small class="text-gray-400">Cor e impacto visual</small></figcaption></div></figure>
+        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Chevrolet Camaro Branco" src="https://www.instagram.com/reel/DGF9nV6pV5Z/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Chevrolet Camaro Branco</h3><small class="text-gray-400">Correção e brilho</small></figcaption></div></figure>
+        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Galaxie 500" src="https://www.instagram.com/reel/CvDkRuKuUhm/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Galaxie 500</h3><small class="text-gray-400">Clássico restaurado</small></figcaption></div></figure>
+        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".05s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Mini Cooper" src="https://www.instagram.com/reel/DOi8aLUjxxK/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Mini Cooper</h3><small class="text-gray-400">Detalhes de personalidade</small></figcaption></div></figure>
+			</div>
+		</section>
+
+		<section id="clients" class="section section-dark relative py-16 md:py-20">
+		  <div class="container xl:max-w-6xl mx-auto px-4">
+        <header class="text-center mx-auto mb-12 lg:px-20">
+          <p class="section-kicker mb-3">Depoimentos</p>
+          <h2 class="section-title text-3xl leading-normal mb-2 font-bold">Conversas que viram confiança</h2>
+          <p class="text-gray-400 leading-relaxed font-light text-xl mx-auto pb-2">Relatos fictícios, com linguagem realista, inspirados na experiência esperada de clientes de estética premium.</p>
+        </header>
+		    <div id="post-carousel" class="navslider-hover splide post-carousel">
+          <div class="splide__track">
+            <div class="splide__list">
+              <div class="splide__slide"><div class="chat-card p-5"><div class="flex items-center mb-4"><span class="avatar mr-3">R</span><div><p class="text-white font-bold">Rafael M.</p><small class="text-gray-500">Vitrificação</small></div></div><div class="chat-bubble p-4 mb-3">Meu carro saiu com um brilho que eu nunca tinha visto. A pintura parece mais profunda.</div><div class="chat-bubble answer p-4 ml-8">A vitrificação deu proteção e realçou bem o verniz. Obrigado pela confiança.</div></div></div>
+              <div class="splide__slide"><div class="chat-card p-5"><div class="flex items-center mb-4"><span class="avatar mr-3">L</span><div><p class="text-white font-bold">Larissa A.</p><small class="text-gray-500">Polimento técnico</small></div></div><div class="chat-bubble p-4 mb-3">As marcas de lavagem sumiram e o preto voltou com muito reflexo. Ficou elegante demais.</div><div class="chat-bubble answer p-4 ml-8">Correção feita com cuidado para preservar a pintura e entregar acabamento limpo.</div></div></div>
+              <div class="splide__slide"><div class="chat-card p-5"><div class="flex items-center mb-4"><span class="avatar mr-3">G</span><div><p class="text-white font-bold">Gustavo P.</p><small class="text-gray-500">Envelopamento</small></div></div><div class="chat-bubble p-4 mb-3">O envelopamento mudou o carro sem perder cara de original. Os recortes ficaram perfeitos.</div><div class="chat-bubble answer p-4 ml-8">Esse era o objetivo: visual agressivo, mas com acabamento sofisticado.</div></div></div>
+              <div class="splide__slide"><div class="chat-card p-5"><div class="flex items-center mb-4"><span class="avatar mr-3">M</span><div><p class="text-white font-bold">Marcos T.</p><small class="text-gray-500">Higienização interna</small></div></div><div class="chat-bubble p-4 mb-3">Interior renovado, sem cheiro forte e com tudo no detalhe. Parece outro carro.</div><div class="chat-bubble answer p-4 ml-8">Higienização bem feita precisa deixar limpo, confortável e natural.</div></div></div>
+              <div class="splide__slide"><div class="chat-card p-5"><div class="flex items-center mb-4"><span class="avatar mr-3">C</span><div><p class="text-white font-bold">Camila S.</p><small class="text-gray-500">Restauração de farol</small></div></div><div class="chat-bubble p-4 mb-3">Os faróis estavam opacos e agora parecem novos. Melhorou até dirigir à noite.</div><div class="chat-bubble answer p-4 ml-8">Restauração finalizada com proteção para manter a lente bonita por mais tempo.</div></div></div>
+            </div>
+          </div>
+        </div>
+		  </div>
+		</section>
+
+		<section id="team" class="section section-panel relative pt-20 pb-10 md:pt-20 md:pb-16">
+		  <div class="container xl:max-w-6xl mx-auto px-4">
+		    <header class="text-center mx-auto mb-12">
+          <p class="section-kicker mb-3">Processo</p>
+		      <h2 class="section-title text-3xl leading-normal mb-2 font-bold">Do diagnóstico à entrega</h2>
+		      <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 60" style="margin: 0 auto;height: 35px;" aria-hidden="true"><circle cx="50.1" cy="30.4" r="5" class="stroke-primary" style="fill: transparent;stroke-width: 2;stroke-miterlimit: 10;"></circle><line x1="55.1" y1="30.4" x2="100" y2="30.4" class="stroke-primary" style="stroke-width: 2;stroke-miterlimit: 10;"></line><line x1="45.1" y1="30.4" x2="0" y2="30.4" class="stroke-primary" style="stroke-width: 2;stroke-miterlimit: 10;"></line></svg></div>
+		    </header>
+		    <div class="flex flex-wrap flex-row -mx-4 justify-center">
+		      <div class="flex-shrink max-w-full px-4 w-full md:w-1/2 lg:w-1/4 mb-8 wow fadeInUp" data-wow-duration="1s"><div class="process-step p-6 h-full"><p class="accent font-bold text-sm mb-2">01</p><h3 class="text-white text-xl font-bold mb-3">Avaliação</h3><p class="text-gray-400">Leitura de pintura, lente, interior e objetivo visual do projeto.</p></div></div>
+		      <div class="flex-shrink max-w-full px-4 w-full md:w-1/2 lg:w-1/4 mb-8 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s"><div class="process-step p-6 h-full"><p class="accent font-bold text-sm mb-2">02</p><h3 class="text-white text-xl font-bold mb-3">Preparação</h3><p class="text-gray-400">Lavagem técnica, descontaminação e proteção das áreas sensíveis.</p></div></div>
+		      <div class="flex-shrink max-w-full px-4 w-full md:w-1/2 lg:w-1/4 mb-8 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s"><div class="process-step p-6 h-full"><p class="accent font-bold text-sm mb-2">03</p><h3 class="text-white text-xl font-bold mb-3">Execução</h3><p class="text-gray-400">Técnica, material correto e controle de acabamento em cada etapa.</p></div></div>
+		      <div class="flex-shrink max-w-full px-4 w-full md:w-1/2 lg:w-1/4 mb-8 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s"><div class="process-step p-6 h-full"><p class="accent font-bold text-sm mb-2">04</p><h3 class="text-white text-xl font-bold mb-3">Entrega</h3><p class="text-gray-400">Inspeção final, orientação de cuidado e registro do resultado.</p></div></div>
+		    </div>
+		  </div>
+		</section>
+
+		<section id="contact" class="section section-dark relative pb-20 pt-10">
+		  <div class="container xl:max-w-6xl mx-auto px-4">
+		    <div class="flex flex-wrap flex-row -mx-4 items-stretch">
+		      <div class="flex-shrink max-w-full px-4 w-full lg:w-5/12 mb-8 lg:mb-0">
+		        <div class="glass-panel w-full p-8 md:p-10 h-full wow fadeInUp" data-wow-duration="1s">
+		          <header class="mb-8">
+		            <p class="section-kicker mb-3">Contato</p>
+		            <h2 class="section-title text-3xl leading-normal mb-3 font-bold">Agende seu projeto</h2>
+		            <p class="text-gray-400 leading-relaxed font-light text-lg">Fale pelo WhatsApp e envie fotos do veículo para uma avaliação inicial.</p>
+		          </header>
+              <div class="space-y-5 text-gray-300">
+                <p><strong class="text-white">WhatsApp:</strong><br><a class="footer-link" target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send/?phone=5514988015487">(14) 98801-5487</a></p>
+                <p><strong class="text-white">Endereço:</strong><br>QD 1, LT 30, Rua Manoel Porfírio da Rocha,<br>Bauru - SP, 17051-230, Brasil</p>
+                <p><strong class="text-white">Horário:</strong><br>Segunda a Sábado<br>09:00 às 18:00</p>
+              </div>
+              <a class="btn-primary py-3 px-8 mt-8" target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send/?phone=5514988015487&amp;text=Ol%C3%A1%2C%20quero%20fazer%20um%20or%C3%A7amento%20com%20a%20Charlotte%20Custom.">Chamar no WhatsApp</a>
+		        </div>
+		      </div>
+          <div class="flex-shrink max-w-full px-4 w-full lg:w-7/12">
+            <div class="portfolio-card overflow-hidden h-full min-h-96 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".15s">
+              <iframe title="Mapa Charlotte Custom Bauru" src="https://www.google.com/maps?q=Rua%20Manoel%20Porf%C3%ADrio%20da%20Rocha%2C%20Bauru%20SP%2017051-230&amp;output=embed" class="w-full h-full min-h-96" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+		    </div>
+		  </div>
+		</section>
+  </main>
+
+  <footer>
+    <div id="footer-content" class="relative pt-10 xl:pt-16 pb-8 xl:pb-12">
+      <div class="container xl:max-w-6xl mx-auto px-4 overflow-hidden">
+        <div class="flex flex-wrap flex-row lg:justify-between -mx-3">
+          <div class="flex-shrink max-w-full w-full lg:w-2/5 px-3 lg:pr-16">
+            <div class="flex items-center mb-4">
+              <img src="src/img/Charlotte.png" class="brand-mark mr-3" alt="Logo Charlotte Custom" width="48" height="48">
+              <span class="text-2xl leading-normal font-bold text-white">Charlotte <span class="accent">Custom</span></span>
+            </div>
+            <p class="text-gray-400">Estética automotiva, proteção e customização premium em Bauru.</p>
+            <ul class="space-x-3 mt-6 mb-8 lg:mb-0">
+              <li class="inline-block"><a target="_blank" class="social-link" rel="noopener noreferrer" href="https://api.whatsapp.com/send/?phone=5514988015487" title="WhatsApp" aria-label="WhatsApp Charlotte Custom"><svg xmlns="http://www.w3.org/2000/svg" width="1.4rem" height="1.4rem" viewBox="0 0 512 512" fill="currentColor"><path d="M256.1 48C141.1 48 48 139.6 48 252.6c0 36.1 9.7 71.4 28.1 102.4L48 464l112.2-29.1c29.5 16 62.7 24.4 96 24.4h.1c115 0 207.9-91.6 207.9-204.6C464.2 139.6 371.1 48 256.1 48Zm122.1 292.2c-5.2 14.5-30.2 27.7-42.2 29.4-10.8 1.6-24.4 2.3-39.4-2.4-9.1-2.9-20.8-6.8-35.7-13.2-62.8-27.1-103.8-90.1-106.9-94.3-3.1-4.1-25.5-33.9-25.5-64.6s16.1-45.8 21.8-52.1c5.7-6.2 12.5-7.8 16.6-7.8h12c3.8.2 9 .7 13.7 10.5 5.2 10.4 17.7 43.2 19.2 46.3 1.6 3.1 2.6 6.8.5 10.9-2.1 4.2-3.1 6.8-6.2 10.4-3.1 3.6-6.5 8-9.4 10.7-3.1 3.1-6.3 6.5-2.7 12.7 3.6 6.2 16 26.3 34.3 42.6 23.6 21 43.5 27.5 49.7 30.6 6.2 3.1 9.9 2.6 13.5-1.6 3.6-4.1 15.6-18.2 19.8-24.4 4.2-6.2 8.3-5.2 14.1-3.1 5.7 2.1 36.4 17.2 42.7 20.3 6.2 3.1 10.4 4.7 12 7.3 1.5 2.6 1.5 15.1-3.7 29.8Z"/></svg></a></li>
+              <li class="inline-block"><a target="_blank" class="social-link" rel="noopener noreferrer" href="https://www.instagram.com/charlotte.customizacoes/" title="Instagram" aria-label="Instagram Charlotte Custom"><svg xmlns="http://www.w3.org/2000/svg" width="1.4rem" height="1.4rem" viewBox="0 0 512 512" fill="currentColor"><path d="M349.33,69.33a93.62,93.62,0,0,1,93.34,93.34V349.33a93.62,93.62,0,0,1-93.34,93.34H162.67a93.62,93.62,0,0,1-93.34-93.34V162.67a93.62,93.62,0,0,1,93.34-93.34H349.33m0-37.33H162.67C90.8,32,32,90.8,32,162.67V349.33C32,421.2,90.8,480,162.67,480H349.33C421.2,480,480,421.2,480,349.33V162.67C480,90.8,421.2,32,349.33,32Z"/><path d="M377.33,162.67a28,28,0,1,1,28-28A27.94,27.94,0,0,1,377.33,162.67Z"/><path d="M256,181.33A74.67,74.67,0,1,1,181.33,256,74.75,74.75,0,0,1,256,181.33M256,144A112,112,0,1,0,368,256,112,112,0,0,0,256,144Z"/></svg></a></li>
+            </ul>
+          </div>
+          <div class="flex-shrink max-w-full w-full lg:w-3/5 px-3">
+            <div class="flex flex-wrap flex-row">
+              <div class="flex-shrink max-w-full w-full sm:w-1/3 mb-6 lg:mb-0">
+                <h4 class="text-base leading-normal mb-3 uppercase text-white">Serviços</h4>
+                <ul class="text-gray-400"><li class="py-1">Vitrificação</li><li class="py-1">Polimento técnico</li><li class="py-1">Envelopamento</li><li class="py-1">Instalação de PPF</li></ul>
+              </div>
+              <div class="flex-shrink max-w-full w-full sm:w-1/3 mb-6 lg:mb-0">
+                <h4 class="text-base leading-normal mb-3 uppercase text-white">Contato</h4>
+                <ul class="text-gray-400"><li class="py-1"><a class="footer-link" href="https://api.whatsapp.com/send/?phone=5514988015487" target="_blank" rel="noopener noreferrer">WhatsApp</a></li><li class="py-1"><a class="footer-link" href="https://www.instagram.com/charlotte.customizacoes/" target="_blank" rel="noopener noreferrer">Instagram</a></li><li class="py-1">Seg. a Sáb. 09:00 às 18:00</li></ul>
+              </div>
+              <div class="flex-shrink max-w-full w-full sm:w-1/3 mb-6 lg:mb-0">
+                <h4 class="text-base leading-normal mb-3 uppercase text-white">Endereço</h4>
+                <p class="text-gray-400">QD 1, LT 30, Rua Manoel Porfírio da Rocha,<br>Bauru - SP<br>17051-230<br>Brasil</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-dark">
+      <div class="container xl:max-w-6xl mx-auto px-4 py-4 border-t border-gray-200 border-opacity-10">
+        <div class="text-center">
+          <p class="d-block my-3">Copyright © Charlotte Custom. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float fixed" target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send/?phone=5514988015487&amp;text=Ol%C3%A1%2C%20quero%20agendar%20um%20servi%C3%A7o%20na%20Charlotte%20Custom." aria-label="Agendar pelo WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.75rem" height="1.75rem" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M256.1 48C141.1 48 48 139.6 48 252.6c0 36.1 9.7 71.4 28.1 102.4L48 464l112.2-29.1c29.5 16 62.7 24.4 96 24.4h.1c115 0 207.9-91.6 207.9-204.6C464.2 139.6 371.1 48 256.1 48Zm122.1 292.2c-5.2 14.5-30.2 27.7-42.2 29.4-10.8 1.6-24.4 2.3-39.4-2.4-9.1-2.9-20.8-6.8-35.7-13.2-62.8-27.1-103.8-90.1-106.9-94.3-3.1-4.1-25.5-33.9-25.5-64.6s16.1-45.8 21.8-52.1c5.7-6.2 12.5-7.8 16.6-7.8h12c3.8.2 9 .7 13.7 10.5 5.2 10.4 17.7 43.2 19.2 46.3 1.6 3.1 2.6 6.8.5 10.9-2.1 4.2-3.1 6.8-6.2 10.4-3.1 3.6-6.5 8-9.4 10.7-3.1 3.1-6.3 6.5-2.7 12.7 3.6 6.2 16 26.3 34.3 42.6 23.6 21 43.5 27.5 49.7 30.6 6.2 3.1 9.9 2.6 13.5-1.6 3.6-4.1 15.6-18.2 19.8-24.4 4.2-6.2 8.3-5.2 14.1-3.1 5.7 2.1 36.4 17.2 42.7 20.3 6.2 3.1 10.4 4.7 12 7.3 1.5 2.6 1.5 15.1-3.7 29.8Z"/></svg>
+  </a>
+
+  <a href="#" class="back-top fixed p-4 rounded border right-4 bottom-4 hidden" aria-label="Voltar ao topo">
+    <svg width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 3.5a.5.5 0 01.5.5v9a.5.5 0 01-1 0V4a.5.5 0 01.5-.5z" clip-rule="evenodd"></path><path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 01.708 0l3 3a.5.5 0 01-.708.708L8 3.707 5.354 6.354a.5.5 0 11-.708-.708l3-3z" clip-rule="evenodd"></path></svg>
+  </a>
+
+  <script src="src/vendors/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="src/vendors/@splidejs/splide/dist/js/splide.min.js"></script>
+  <script src="src/vendors/typed.js/lib/typed.min.js"></script>
+  <script src="src/vendors/wow.js/dist/wow.min.js"></script>
+  <script src="src/vendors/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="src/js/theme.js"></script>
+</body>
+</html>
