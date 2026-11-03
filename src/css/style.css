@@ -1,6 +1,6 @@
 :root {
-    --primary:#68e1fd;
-    --gray:#f9f9f9;
+    --primary:#e00486;
+    --gray:#7f8184;
 }
 
 *, ::before, ::after {
@@ -880,13 +880,13 @@ video {
 }
 .bg-blue-400 {
     --tw-bg-opacity:1;
-    background-color:rgb(96 165 250 / var(--tw-bg-opacity, 1));
+    background-color:rgb(224 4 134 / var(--tw-bg-opacity, 1));
 }
 .bg-blue-500 {
-    background-color:#99ecff;;
+    background-color:#e00486;
 }
 .bg-blue-700 {
-    background-color:#68e1fd;;
+    background-color:#e00486;
 }
 .bg-gray-100 {
     --tw-bg-opacity:1;
@@ -1117,10 +1117,10 @@ video {
     color:rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 .text-blue-500 {
-    color:#99ecff;;
+    color:#e00486;
 }
 .text-blue-700 {
-    color:#68e1fd;;
+    color:#e00486;
 }
 .text-gray-100 {
     --tw-text-opacity:1;
@@ -1128,7 +1128,7 @@ video {
 }
 .text-gray-500 {
     --tw-text-opacity:1;
-    color:rgb(125 125 125 / var(--tw-text-opacity, 1));
+    color:rgb(168 169 173 / var(--tw-text-opacity, 1));
 }
 .text-gray-600 {
     --tw-text-opacity:1;
@@ -2397,7 +2397,7 @@ iframe.wait-autoplay {
     color:rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 .hover\:text-blue-700:hover {
-    color:#68e1fd;;
+    color:#e00486;
 }
 .hover\:text-gray-800:hover {
     --tw-text-opacity:1;

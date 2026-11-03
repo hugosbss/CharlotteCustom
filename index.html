@@ -1,11 +1,3 @@
-<!--
-Template Name: Tailone - Tailwind One Page Template
-Author: Aribudin
-Website: https://www.tailwindtemplate.net
-Contact: support@tailwindtemplate.net
-Purchase: https://themes.tailwindtemplate.net/tailone
-License: You must have a valid license from official store to legally use the theme for your project.
--->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -22,16 +14,46 @@ License: You must have a valid license from official store to legally use the th
   <meta property="og:description" content="Acabamento sofisticado para carros especiais: polimento, vitrificação, PPF, envelopamento e higienização detalhada.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="src/img/Charlotte.png">
+  <meta property="og:image:alt" content="Logo Charlotte Custom">
+  <meta property="og:locale" content="pt_BR">
 
   <link rel="preconnect" href="https://www.instagram.com">
   <link rel="preconnect" href="https://www.google.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="src/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="src/img/favicon-32x32.png">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutomotiveBusiness",
+      "name": "Charlotte Custom",
+      "description": "Estética automotiva, proteção e customização premium em Bauru.",
+      "telephone": "+5514988015487",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "QD 1, LT 30, Rua Manoel Porfírio da Rocha",
+        "addressLocality": "Bauru",
+        "addressRegion": "SP",
+        "postalCode": "17051-230",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }],
+      "sameAs": ["https://www.instagram.com/charlotte.customizacoes/"]
+    }
+  </script>
 
   <style>
     :root {
       --pink: #e00486;
+      --pink-text: #ff68b4;
       --black: #050506;
       --panel: #1a1b20;
       --muted: #7f8184;
@@ -66,6 +88,7 @@ License: You must have a valid license from official store to legally use the th
     .leading-tight { line-height: 1.15; }
     .text-gray-300 { color: #d8d8dc; }
     .text-gray-400 { color: #a8a9ad; }
+    .text-gray-500 { color: #a8a9ad; }
     .space-y-5 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.25rem; }
     @media (min-width: 640px) {
       .sm\:flex-row { flex-direction: row; }
@@ -87,8 +110,6 @@ License: You must have a valid license from official store to legally use the th
       .lg\:mx-0 { margin-left: 0; margin-right: 0; }
     }
 
-    body.loaded-success .preloader { display: none; }
-    .preloader { background: var(--black); }
     .brand-mark { width: 48px; height: 48px; object-fit: contain; }
     .main-nav {
       color: #f7f7f8;
@@ -101,6 +122,20 @@ License: You must have a valid license from official store to legally use the th
       box-shadow: 0 20px 60px rgba(0, 0, 0, .28);
       backdrop-filter: blur(14px);
     }
+    .skip-link {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 60;
+      padding: .75rem 1rem;
+      color: #fff;
+      background: var(--panel);
+      border: 1px solid var(--pink);
+      border-radius: 6px;
+      transform: translateY(-180%);
+      transition: transform .2s ease;
+    }
+    .skip-link:focus { transform: translateY(0); }
     .navbar {
       background: rgba(5, 5, 6, .96);
       border: 1px solid rgba(255, 255, 255, .08);
@@ -120,7 +155,7 @@ License: You must have a valid license from official store to legally use the th
     .section-panel { background: #0b0c10; }
     .section-title { color: #fff; letter-spacing: 0; }
     .section-kicker {
-      color: var(--pink);
+      color: var(--pink-text);
       text-transform: uppercase;
       font-size: .76rem;
       letter-spacing: .14em;
@@ -129,9 +164,18 @@ License: You must have a valid license from official store to legally use the th
     .divider svg .stroke-primary { stroke: var(--pink); }
     .hero {
       min-height: 100vh;
+      min-height: 100svh;
+      padding-top: 0;
+      padding-bottom: 0;
       isolation: isolate;
       overflow: hidden;
       background: #050506 url("src/img/Charlotte.png") center/180px no-repeat;
+    }
+    .hero-content-row {
+      min-height: 100vh;
+      min-height: 100svh;
+      padding-top: 6rem;
+      padding-bottom: 3rem;
     }
     .hero-media, .hero-media iframe {
       position: absolute;
@@ -156,6 +200,15 @@ License: You must have a valid license from official store to legally use the th
         linear-gradient(180deg, rgba(5, 5, 6, .2), rgba(5, 5, 6, .82));
     }
     .hero-content { position: relative; z-index: 2; }
+    .hero-reel-link {
+      display: inline-flex;
+      margin-top: 1rem;
+      color: #e7e7ea;
+      text-decoration: underline;
+      text-decoration-color: rgba(255, 104, 180, .7);
+      text-underline-offset: .25rem;
+    }
+    .hero-reel-link:hover { color: var(--pink-text); }
     .accent { color: var(--pink); }
     .btn-primary, .btn-secondary {
       display: inline-flex;
@@ -234,12 +287,36 @@ License: You must have a valid license from official store to legally use the th
       display: block;
       background: #050506;
     }
+    .portfolio-item { flex: 0 0 100%; max-width: 100%; }
+    .portfolio-link {
+      display: inline-flex;
+      margin-top: .65rem;
+      color: var(--pink-text);
+      font-size: .875rem;
+      text-decoration: underline;
+      text-underline-offset: .2rem;
+    }
+    .portfolio-link:hover { color: #fff; }
     .chat-card {
       background: linear-gradient(180deg, rgba(26, 27, 32, .98), rgba(11, 12, 16, .98));
       border: 1px solid rgba(255, 255, 255, .08);
       border-radius: 8px;
       min-height: 230px;
       box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+    }
+    #post-carousel:not(.is-initialized):not(.is-rendered) { visibility: visible; }
+    #post-carousel:not(.is-initialized):not(.is-rendered) .splide__track { overflow: visible; }
+    #post-carousel:not(.is-initialized):not(.is-rendered) .splide__list {
+      height: auto;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    #post-carousel:not(.is-initialized):not(.is-rendered) .splide__slide { flex: 1 1 100%; }
+    @media (min-width: 768px) {
+      #post-carousel:not(.is-initialized):not(.is-rendered) .splide__slide { flex-basis: calc(50% - .5rem); }
+    }
+    @media (min-width: 1024px) {
+      #post-carousel:not(.is-initialized):not(.is-rendered) .splide__slide { flex-basis: calc(33.333% - .67rem); }
     }
     .chat-bubble {
       position: relative;
@@ -258,7 +335,7 @@ License: You must have a valid license from official store to legally use the th
       border-radius: 999px;
       background: rgba(224, 4, 134, .14);
       border: 1px solid rgba(224, 4, 134, .35);
-      color: var(--pink);
+      color: var(--pink-text);
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -307,25 +384,38 @@ License: You must have a valid license from official store to legally use the th
     }
     .whatsapp-float:hover { transform: translateY(-3px); box-shadow: 0 22px 54px rgba(224, 4, 134, .48); }
     .back-top { background: #1a1b20; border-color: rgba(255, 255, 255, .12); color: #fff; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--pink-text);
+      outline-offset: 3px;
+    }
+    @media (min-width: 640px) {
+      .portfolio-item { flex-basis: 50%; max-width: 50%; }
+    }
+    @media (min-width: 1024px) {
+      .portfolio-item { flex-basis: 33.333333%; max-width: 33.333333%; }
+    }
+    @media (min-width: 1440px) {
+      .portfolio-item { flex-basis: 25%; max-width: 25%; }
+    }
     @media (max-width: 640px) {
-      .hero { min-height: 92vh; }
       .hero-media iframe { transform: scale(1.42); }
       .section-title { font-size: 1.75rem; }
       .portfolio-card .px-4 { padding-left: .85rem; padding-right: .85rem; }
     }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+      .hero-media { display: none; }
+    }
   </style>
 </head>
 <body class="text-gray-300">
-	<div class="preloader loaded-success fixed inset-0 z-50">
-	  <div class="absolute left-1/2 top-1/2 transform -translate-y-1/2">
-	    <div class="relative mx-auto my-12">
-	      <svg class="animate-spin h-8 w-8" style="color: var(--pink);" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-label="Carregando">
-	        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-	        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-	      </svg>
-	    </div>
-	  </div>
-	</div>
+	<a class="skip-link" href="#content">Pular para o conteúdo</a>
 
   <header class="fixed top-0 left-0 right-0 z-40">
      <nav class="main-nav">
@@ -338,7 +428,7 @@ License: You must have a valid license from official store to legally use the th
               </a>
 	            <div class="flex flex-row items-center py-4 lg:py-0">
 	              <div class="relative block lg:hidden">
-	                <button type="button" class="menu-mobile block py-3 px-4 border-b-2 border-transparent" aria-label="Abrir menu">
+	                <button type="button" class="menu-mobile block py-3 px-4 border-b-2 border-transparent" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-navigation">
 	                  <span class="sr-only">Menu mobile</span>
 	                  <svg class="open h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="close h-8 w-8" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/><path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/></svg>
@@ -347,7 +437,7 @@ License: You must have a valid license from official store to legally use the th
 	            </div>
 	          </div>
             <div class="flex flex-row">
-              <ul class="navbar w-full hidden text-center lg:text-left lg:flex lg:flex-row text-sm items-center font-bold">
+              <ul id="primary-navigation" class="navbar w-full hidden text-center lg:text-left lg:flex lg:flex-row text-sm items-center font-bold">
                 <li class="relative"><a class="active block py-3 lg:py-7 px-5 border-b-2 border-transparent" href="#hero">Início</a></li>
                 <li class="relative"><a class="block py-3 lg:py-7 px-5 border-b-2 border-transparent" href="#services">Serviços</a></li>
                 <li class="relative"><a class="block py-3 lg:py-7 px-5 border-b-2 border-transparent" href="#portfolio">Projetos</a></li>
@@ -361,13 +451,13 @@ License: You must have a valid license from official store to legally use the th
      </nav>
   </header>
 
-  <main id="content">
-		<section id="hero" class="section hero relative z-0 py-16 md:pt-32 md:pb-20">
+  <main id="content" tabindex="-1">
+			<section id="hero" class="section hero relative z-0">
       <div class="hero-media" aria-hidden="true">
-        <iframe title="Charlotte Custom em ação" src="https://www.instagram.com/reel/DHpJpZ8sme9/embed?utm_source=ig_embed&amp;autoplay=1&amp;muted=1" allow="autoplay; encrypted-media; picture-in-picture" loading="eager"></iframe>
+        <iframe title="Vídeo do evento Custom Fest" tabindex="-1" src="https://www.instagram.com/reel/DHpJpZ8sme9/embed?autoplay=1&amp;muted=1&amp;loop=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="eager" referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
 		  <div class="hero-content container xl:max-w-6xl mx-auto px-4">
-		    <div class="flex flex-wrap flex-row -mx-4 items-center min-h-screen pt-20 pb-12">
+		    <div class="hero-content-row flex flex-wrap flex-row -mx-4 items-center">
 		      <div class="flex-shrink max-w-full px-4 w-full lg:w-7/12">
 		        <div class="text-center lg:text-left">
 		          <div class="mb-10">
@@ -382,6 +472,7 @@ License: You must have a valid license from official store to legally use the th
                 </a>
   							<a class="btn-secondary py-3 px-8" href="#portfolio">Ver Projetos</a>
               </div>
+              <a class="hero-reel-link" href="https://www.instagram.com/reel/DHpJpZ8sme9/" target="_blank" rel="noopener noreferrer">Assistir ao vídeo do Custom Fest no Instagram</a>
 		        </div>
 		      </div>
           <div class="flex-shrink max-w-full px-4 w-full lg:w-5/12 mt-12 lg:mt-0">
@@ -436,18 +527,18 @@ License: You must have a valid license from official store to legally use the th
 			</div>
 
 			<div class="flex flex-wrap flex-row px-2">
-        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Porsche 911" src="https://www.instagram.com/reel/DRDtwIQjwkg/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Porsche 911</h3><small class="text-gray-400">Detalhamento premium</small></figcaption></div></figure>
-        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".05s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Mercedes C250" src="https://www.instagram.com/reel/DPv2vvPgJuV/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Mercedes C250</h3><small class="text-gray-400">Acabamento sofisticado</small></figcaption></div></figure>
-        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Nissan 350Z" src="https://www.instagram.com/reel/C02Xty8uwXT/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Nissan 350Z</h3><small class="text-gray-400">Esportividade em foco</small></figcaption></div></figure>
-        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".15s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Nissan Silvia" src="https://www.instagram.com/reel/C_JsuU3uP2N/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Nissan Silvia</h3><small class="text-gray-400">Customização automotiva</small></figcaption></div></figure>
-        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto BMW" src="https://www.instagram.com/reel/DSPzCbPDXCv/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">BMW</h3><small class="text-gray-400">Presença premium</small></figcaption></div></figure>
-        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Range Rover" src="https://www.instagram.com/reel/DGDbPxZo7O_/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Range Rover</h3><small class="text-gray-400">Luxo e proteção</small></figcaption></div></figure>
-        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".05s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Volvo XC90" src="https://www.instagram.com/reel/DNnoRAYApaA/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Volvo XC90</h3><small class="text-gray-400">Detalhamento familiar premium</small></figcaption></div></figure>
-        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Audi S3" src="https://www.instagram.com/reel/C8j-iqEOPeO/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Audi S3</h3><small class="text-gray-400">Visual esportivo</small></figcaption></div></figure>
-        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".15s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Chevrolet Camaro Amarelo" src="https://www.instagram.com/reel/C3gUOgJu8q9/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Chevrolet Camaro Amarelo</h3><small class="text-gray-400">Cor e impacto visual</small></figcaption></div></figure>
-        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Chevrolet Camaro Branco" src="https://www.instagram.com/reel/DGF9nV6pV5Z/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Chevrolet Camaro Branco</h3><small class="text-gray-400">Correção e brilho</small></figcaption></div></figure>
-        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Galaxie 500" src="https://www.instagram.com/reel/CvDkRuKuUhm/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Galaxie 500</h3><small class="text-gray-400">Clássico restaurado</small></figcaption></div></figure>
-        <figure class="flex-shrink max-w-full px-3 w-full sm:w-1/2 lg:w-1/5 group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".05s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Mini Cooper" src="https://www.instagram.com/reel/DOi8aLUjxxK/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Mini Cooper</h3><small class="text-gray-400">Detalhes de personalidade</small></figcaption></div></figure>
+	        <figure class="flex-shrink max-w-full px-3 w-full portfolio-item group wow fadeInUp" data-wow-duration="1s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Porsche 911" src="https://www.instagram.com/reel/DRDtwIQjwkg/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Porsche 911</h3><small class="text-gray-400">Detalhamento premium</small><a class="portfolio-link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/reel/DRDtwIQjwkg/">Abrir no Instagram</a></figcaption></div></figure>
+        <figure class="flex-shrink max-w-full px-3 w-full portfolio-item group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".05s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Mercedes C250" src="https://www.instagram.com/reel/DPv2vvPgJuV/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Mercedes C250</h3><small class="text-gray-400">Acabamento sofisticado</small><a class="portfolio-link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/reel/DPv2vvPgJuV/">Abrir no Instagram</a></figcaption></div></figure>
+        <figure class="flex-shrink max-w-full px-3 w-full portfolio-item group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Nissan 350Z" src="https://www.instagram.com/reel/C02Xty8uwXT/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Nissan 350Z</h3><small class="text-gray-400">Esportividade em foco</small><a class="portfolio-link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/reel/C02Xty8uwXT/">Abrir no Instagram</a></figcaption></div></figure>
+        <figure class="flex-shrink max-w-full px-3 w-full portfolio-item group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".15s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Nissan Silvia" src="https://www.instagram.com/reel/C_JsuU3uP2N/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Nissan Silvia</h3><small class="text-gray-400">Customização automotiva</small><a class="portfolio-link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/reel/C_JsuU3uP2N/">Abrir no Instagram</a></figcaption></div></figure>
+        <figure class="flex-shrink max-w-full px-3 w-full portfolio-item group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto BMW" src="https://www.instagram.com/reel/DSPzCbPDXCv/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">BMW</h3><small class="text-gray-400">Presença premium</small><a class="portfolio-link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/reel/DSPzCbPDXCv/">Abrir no Instagram</a></figcaption></div></figure>
+        <figure class="flex-shrink max-w-full px-3 w-full portfolio-item group wow fadeInUp" data-wow-duration="1s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Range Rover" src="https://www.instagram.com/reel/DGDbPxZo7O_/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Range Rover</h3><small class="text-gray-400">Luxo e proteção</small><a class="portfolio-link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/reel/DGDbPxZo7O_/">Abrir no Instagram</a></figcaption></div></figure>
+        <figure class="flex-shrink max-w-full px-3 w-full portfolio-item group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".05s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Volvo XC90" src="https://www.instagram.com/reel/DNnoRAYApaA/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Volvo XC90</h3><small class="text-gray-400">Detalhamento familiar premium</small><a class="portfolio-link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/reel/DNnoRAYApaA/">Abrir no Instagram</a></figcaption></div></figure>
+        <figure class="flex-shrink max-w-full px-3 w-full portfolio-item group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Audi S3" src="https://www.instagram.com/reel/C8j-iqEOPeO/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Audi S3</h3><small class="text-gray-400">Visual esportivo</small><a class="portfolio-link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/reel/C8j-iqEOPeO/">Abrir no Instagram</a></figcaption></div></figure>
+        <figure class="flex-shrink max-w-full px-3 w-full portfolio-item group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".15s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Chevrolet Camaro Amarelo" src="https://www.instagram.com/reel/C3gUOgJu8q9/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Chevrolet Camaro Amarelo</h3><small class="text-gray-400">Cor e impacto visual</small><a class="portfolio-link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/reel/C3gUOgJu8q9/">Abrir no Instagram</a></figcaption></div></figure>
+        <figure class="flex-shrink max-w-full px-3 w-full portfolio-item group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Chevrolet Camaro Branco" src="https://www.instagram.com/reel/DGF9nV6pV5Z/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Chevrolet Camaro Branco</h3><small class="text-gray-400">Correção e brilho</small><a class="portfolio-link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/reel/DGF9nV6pV5Z/">Abrir no Instagram</a></figcaption></div></figure>
+        <figure class="flex-shrink max-w-full px-3 w-full portfolio-item group wow fadeInUp" data-wow-duration="1s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Galaxie 500" src="https://www.instagram.com/reel/CvDkRuKuUhm/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Galaxie 500</h3><small class="text-gray-400">Clássico restaurado</small><a class="portfolio-link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/reel/CvDkRuKuUhm/">Abrir no Instagram</a></figcaption></div></figure>
+        <figure class="flex-shrink max-w-full px-3 w-full portfolio-item group wow fadeInUp" data-wow-duration="1s" data-wow-delay=".05s"><div class="portfolio-card overflow-hidden mb-6"><div class="ig-media"><iframe title="Projeto Mini Cooper" src="https://www.instagram.com/reel/DOi8aLUjxxK/embed" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><figcaption class="px-4 py-4"><h3 class="text-base font-semibold text-white">Mini Cooper</h3><small class="text-gray-400">Detalhes de personalidade</small><a class="portfolio-link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/reel/DOi8aLUjxxK/">Abrir no Instagram</a></figcaption></div></figure>
 			</div>
 		</section>
 
@@ -458,7 +549,7 @@ License: You must have a valid license from official store to legally use the th
           <h2 class="section-title text-3xl leading-normal mb-2 font-bold">Conversas que viram confiança</h2>
           <p class="text-gray-400 leading-relaxed font-light text-xl mx-auto pb-2">Relatos fictícios, com linguagem realista, inspirados na experiência esperada de clientes de estética premium.</p>
         </header>
-		    <div id="post-carousel" class="navslider-hover splide post-carousel">
+		    <div id="post-carousel" class="navslider-hover splide post-carousel" aria-label="Depoimentos de clientes">
           <div class="splide__track">
             <div class="splide__list">
               <div class="splide__slide"><div class="chat-card p-5"><div class="flex items-center mb-4"><span class="avatar mr-3">R</span><div><p class="text-white font-bold">Rafael M.</p><small class="text-gray-500">Vitrificação</small></div></div><div class="chat-bubble p-4 mb-3">Meu carro saiu com um brilho que eu nunca tinha visto. A pintura parece mais profunda.</div><div class="chat-bubble answer p-4 ml-8">A vitrificação deu proteção e realçou bem o verniz. Obrigado pela confiança.</div></div></div>
@@ -508,7 +599,7 @@ License: You must have a valid license from official store to legally use the th
 		      </div>
           <div class="flex-shrink max-w-full px-4 w-full lg:w-7/12">
             <div class="portfolio-card overflow-hidden h-full min-h-96 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".15s">
-              <iframe title="Mapa Charlotte Custom Bauru" src="https://www.google.com/maps?q=Rua%20Manoel%20Porf%C3%ADrio%20da%20Rocha%2C%20Bauru%20SP%2017051-230&amp;output=embed" class="w-full h-full min-h-96" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe title="Mapa Charlotte Custom Bauru" src="https://www.google.com/maps?q=QD%201%2C%20LT%2030%2C%20Rua%20Manoel%20Porf%C3%ADrio%20da%20Rocha%2C%20Bauru%20SP%2017051-230%20Brasil&amp;output=embed" class="w-full h-full min-h-96" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
 		    </div>
@@ -535,7 +626,7 @@ License: You must have a valid license from official store to legally use the th
             <div class="flex flex-wrap flex-row">
               <div class="flex-shrink max-w-full w-full sm:w-1/3 mb-6 lg:mb-0">
                 <h4 class="text-base leading-normal mb-3 uppercase text-white">Serviços</h4>
-                <ul class="text-gray-400"><li class="py-1">Vitrificação</li><li class="py-1">Polimento técnico</li><li class="py-1">Envelopamento</li><li class="py-1">Instalação de PPF</li></ul>
+                <ul class="text-gray-400"><li class="py-1">Polimentos e vitrificação</li><li class="py-1">Vidros, para-brisa e faróis</li><li class="py-1">Customização e envelopamento</li><li class="py-1">Instalação de PPF</li><li class="py-1">Lavagem e limpeza detalhada</li><li class="py-1">Higienização interna e do ar-condicionado</li></ul>
               </div>
               <div class="flex-shrink max-w-full w-full sm:w-1/3 mb-6 lg:mb-0">
                 <h4 class="text-base leading-normal mb-3 uppercase text-white">Contato</h4>
@@ -564,7 +655,7 @@ License: You must have a valid license from official store to legally use the th
     <svg xmlns="http://www.w3.org/2000/svg" width="1.75rem" height="1.75rem" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M256.1 48C141.1 48 48 139.6 48 252.6c0 36.1 9.7 71.4 28.1 102.4L48 464l112.2-29.1c29.5 16 62.7 24.4 96 24.4h.1c115 0 207.9-91.6 207.9-204.6C464.2 139.6 371.1 48 256.1 48Zm122.1 292.2c-5.2 14.5-30.2 27.7-42.2 29.4-10.8 1.6-24.4 2.3-39.4-2.4-9.1-2.9-20.8-6.8-35.7-13.2-62.8-27.1-103.8-90.1-106.9-94.3-3.1-4.1-25.5-33.9-25.5-64.6s16.1-45.8 21.8-52.1c5.7-6.2 12.5-7.8 16.6-7.8h12c3.8.2 9 .7 13.7 10.5 5.2 10.4 17.7 43.2 19.2 46.3 1.6 3.1 2.6 6.8.5 10.9-2.1 4.2-3.1 6.8-6.2 10.4-3.1 3.6-6.5 8-9.4 10.7-3.1 3.1-6.3 6.5-2.7 12.7 3.6 6.2 16 26.3 34.3 42.6 23.6 21 43.5 27.5 49.7 30.6 6.2 3.1 9.9 2.6 13.5-1.6 3.6-4.1 15.6-18.2 19.8-24.4 4.2-6.2 8.3-5.2 14.1-3.1 5.7 2.1 36.4 17.2 42.7 20.3 6.2 3.1 10.4 4.7 12 7.3 1.5 2.6 1.5 15.1-3.7 29.8Z"/></svg>
   </a>
 
-  <a href="#" class="back-top fixed p-4 rounded border right-4 bottom-4 hidden" aria-label="Voltar ao topo">
+  <a href="#hero" class="back-top fixed p-4 rounded border right-4 bottom-4 hidden" aria-label="Voltar ao topo">
     <svg width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 3.5a.5.5 0 01.5.5v9a.5.5 0 01-1 0V4a.5.5 0 01.5-.5z" clip-rule="evenodd"></path><path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 01.708 0l3 3a.5.5 0 01-.708.708L8 3.707 5.354 6.354a.5.5 0 11-.708-.708l3-3z" clip-rule="evenodd"></path></svg>
   </a>
 

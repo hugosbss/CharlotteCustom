@@ -8,6 +8,7 @@ const tersers              = require('gulp-terser');
 const cleanCSS             = require('gulp-clean-css');
 const purgecss             = require('gulp-purgecss');
 const logSymbols           = require('log-symbols');
+const replace              = require('gulp-replace');
 
 //Load Previews on Browser on dev
 function livePreview(done){
@@ -70,6 +71,30 @@ function prodScripts(){
   .pipe(tersers())
   .pipe(dest("./dist/js"));
 }
+// Copy the entry page and make its asset URLs relative to the dist folder.
+// SITE_URL adds canonical and absolute Open Graph URLs for production crawlers.
+function prodHtml(){
+  const siteUrl = (process.env.SITE_URL || "").replace(/\/+$/, "");
+  let html = src("./index.html")
+    .pipe(replace(/  <script src="src\/vendors\/[^\"]+"><\/script>\n/g, ""))
+    .pipe(replace('  <script src="src/js/theme.js"></script>\n', ""))
+    .pipe(replace("src/css/style.css", "css/style.css"))
+    .pipe(replace(/src\/img\//g, "img/"));
+
+  if (siteUrl) {
+    html = html
+      .pipe(replace('content="img/Charlotte.png"', `content="${siteUrl}/img/Charlotte.png"`))
+      .pipe(replace("</head>", `  <link rel="canonical" href="${siteUrl}/">\n  <meta property="og:url" content="${siteUrl}/">\n</head>`));
+  }
+
+  return html
+    .pipe(replace("</body>", '  <script src="js/scripts.js" defer></script>\n</body>'))
+    .pipe(dest("./dist"));
+}
+function prodImages(){
+  return src("./src/img/**/*", { encoding: false })
+    .pipe(dest("./dist/img"));
+}
 // finish log
 function buildFinish(done){
   console.log("\n\t" + logSymbols.info,`Production is complete.\n`);
@@ -96,5 +121,6 @@ exports.default = series( devClean, devStyles, livePreview, watchFiles);
 exports.prod = series(
   devClean,
   parallel(prodStyles, prodScripts), //Run All tasks in parallel
+  parallel(prodHtml, prodImages),
   buildFinish
 );
